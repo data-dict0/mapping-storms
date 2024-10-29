@@ -1,0 +1,233 @@
+html,
+body {
+  font: 'Roboto';
+  margin: 10px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.title-container {
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+  padding: 3em;
+}
+
+
+h3 {
+  text-align: center;
+}
+
+a {
+  text-decoration-color: #212529;
+  color: #212529;
+}
+
+.title {
+  text-align: center !important;
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 30%;
+  color: #333333;
+  font-size: 45px;
+  font-weight: bold;
+}
+.h6 {
+    margin-bottom: -10px;
+}
+
+.first-letter {
+  font-size: 65px;
+  line-height: 55px;
+  float: left;
+}
+
+.caption {
+  font-size: 11px;
+}
+
+
+iframe,
+img,
+video {
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0;
+  padding-bottom: 1.2em;
+}
+
+ul {
+  margin: 0;
+  padding-bottom: 1em;
+  line-height: 1.6;
+}
+
+iframe {
+  padding-bottom: 1.2em;
+}
+
+
+.scrolly-container {
+    position: relative;
+    margin-bottom: 1.2em;
+}
+
+.sticky-thing {
+    position: sticky;
+    top: 0;
+    transform: translate(0px, 0px);
+    z-index: 1;
+    height: 100svh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    /* Center everything inside */
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; */
+}
+
+.sticky-thing > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;  
+}
+
+.video-container {
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+
+.scrolly-container video {
+    position: absolute;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+
+.sticky-thing iframe {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.steps-container {
+    transform: translate3d(0,0,0);
+    position: relative;
+    padding: 0;
+    z-index: 10;
+    max-width: 35rem;
+    margin: 0 auto;
+    padding-bottom: 4em;
+}
+
+.step {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50svh;
+}
+
+.step p {
+    text-align: left;
+}
+
+.step p:last-child {
+    padding: 0;
+}
+
+.step > * {
+    width: 700px;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+    text-align: center;
+    padding: 1.2em !important;
+}
+
+.sticky-thing > canvas {
+    width: 70% !important;
+    height: 70% !important;
+    object-fit: cover;
+    display: block;  
+}
+
+/* When it's less than 700 pixels wide, do normal scrollytelling */
+
+@media only screen and (max-width: 500px) {
+
+    body {
+        font-size: 18px;
+      }
+    
+      .title {
+        text-align: center !important;
+        justify-content: center;
+        position: absolute;
+        color: #212529;
+        font-size: 25px;
+        font-weight: bold;
+        background: #ffffff;
+      }
+    
+      .first-letter {
+        font-size: 50px;
+        line-height: 40px;
+        float: left;
+        text-indent: 0;
+      }
+    
+      .dek-container {
+        text-align: center;
+        position: relative;
+        margin: 0 auto;
+        display: inline-block;
+        padding-top: 4em;
+        padding-bottom: 7em;
+      }
+    
+      .dek {
+        text-align: center !important;
+        inline-size: 350px;
+        display: inline-block;
+        margin: 0 auto;
+        position: absolute;
+        color: #333333;
+        font-size: 16px;
+      }
+    .scrolly-container.side-by-side {
+        display: flex;
+    }
+
+    .scrolly-container.side-by-side>div {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 0.75em;
+    }
+
+    .scrolly-container.side-by-side .scrolly-overlay {
+        margin-top: 70vh;
+        order: 0;
+        /* Change these to adjust sizing options */
+        min-width: 15rem;
+        max-width: 20rem;
+    }
+
+    .scrolly-container.side-by-side .sticky-thing {
+        order: 1;
+        flex-grow: 2;
+    }
+}
